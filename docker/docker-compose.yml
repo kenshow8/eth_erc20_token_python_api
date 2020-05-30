@@ -8,11 +8,9 @@ services:
     ports:
         - '8080:8080'
     environment:
-        WEB3_URL: 'http://$LOCAL_HOST_IP:7545'
+        WEB3_URL: 'http://$LOCAL_HOST_IP:7545' # ローカルホスト以外にトークンをデプロイしている場合は編集してください。
         CONTRACT_ADDRESS: '${CONTRACT_ADDRESS}'
         OWNER_ADDRESS: '${OWNER_ADDRESS}'
-    extra_hosts:
-        - 'local_dev:$LOCAL_HOST_IP'
     command: >
         bash -c "
         python /app/kenshow8_eth_api/config_make_docker.py &&
