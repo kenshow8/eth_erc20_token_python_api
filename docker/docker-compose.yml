@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  kenshow8_eth_api:
+    image: kenshow8/python3:1.0
+    build: .
+    container_name: 'kenshow8_eth_api'
+    ports:
+        - '8080:8080'
+    environment:
+        WEB3_URL: 'http://$LOCAL_HOST_IP:7545'
+        CONTRACT_ADDRESS: '${CONTRACT_ADDRESS}'
+        OWNER_ADDRESS: '${OWNER_ADDRESS}'
+    extra_hosts:
+        - 'local_dev:$LOCAL_HOST_IP'
+    command: >
+        bash -c "
+        python /app/kenshow8_eth_api/config_make_docker.py &&
+        cat /app/kenshow8_eth_api/config/setting.ini &&
+        python /app/kenshow8_eth_api/coin_api.py
+        "
