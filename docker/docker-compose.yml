@@ -13,7 +13,7 @@ services:
         OWNER_ADDRESS: '${OWNER_ADDRESS}'
     command: >
         bash -c "
-        python /app/kenshow8_eth_api/config_make_docker.py &&
-        cat /app/kenshow8_eth_api/config/setting.ini &&
-        python /app/kenshow8_eth_api/coin_api.py
+        python /app/eth_erc20_token_python_api/config_make_docker.py &&
+        cat /app/eth_erc20_token_python_api/config/setting.ini &&
+        python /app/eth_erc20_token_python_api/coin_api.py
         "
