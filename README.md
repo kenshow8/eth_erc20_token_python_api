@@ -1,6 +1,9 @@
 # eth_erc20_token_python_api
 python flaskを使ったerc20準拠トークンのAPIです。  
 
+# ブログ記事
+https://blog.kenshow8.com/ethereum/ethereum-erc20-token-api-python/
+
 # 環境
 macOS Catalina : 10.15.4  
 python : Python 3.7.6(Anaconda)  
