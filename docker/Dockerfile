@@ -17,7 +17,7 @@ RUN pip install --upgrade setuptools
 RUN pip install web3
 RUN pip install flask
 
-RUN git clone https://github.com/wmapst/kenshow8_eth_api.git
+RUN git clone https://github.com/kenshow8/eth_erc20_token_python_api.git
 
 EXPOSE 8080
 
